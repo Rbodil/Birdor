@@ -1,0 +1,29 @@
+{
+    "name": "Bird-server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "watch": "nodemon",
+        "seed": "node seeders/seeds.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcrypt": "^4.0.1",
+        "jsonwebtoken": "^8.5.1",
+        "apollo-server-express": "^3.6.1",
+        "express": "^4.17.2",
+        "graphql": "^16.2.0",
+        "mongoose": "^6.1.6",
+        "popper.js": "^1.16.0",
+        "webpack-pwa-manifest": "^4.1.1",
+        "compression": "^1.7.4",
+        "morgan": "^1.9.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.3"
+    }
+}
