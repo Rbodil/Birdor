@@ -1,0 +1,53 @@
+[
+    {
+        "postText": "Cool bird I found in Seattle",
+        "username": "Gigachad",
+        "reactions": [
+            {
+                "reactionBody": "That is a cool bird man!",
+                "username":"Gigachad"
+            }
+        ]
+    },
+    {
+        "postText": "Cool bird I found in AZ",
+        "username": "Gigachad",
+        "reactions": [
+            {
+                "reactionBody": "That is a cool bird man!",
+                "username":"Gigachad"
+            }
+        ]
+    },
+    {
+        "postText": "Cool bird I found in Detroit",
+        "username": "Gigachad",
+        "reactions": [
+            {
+                "reactionBody": "That is a cool bird man!",
+                "username":"Gigachad"
+            }
+        ]
+    },
+    {
+        "postText": "Cool bird I found in Texas",
+        "username": "Gigachad",
+        "reactions": [
+            {
+                "reactionBody": "That is a cool bird man!",
+                "username":"Gigachad"
+            }
+        ]
+    },
+    {
+        "postText": "Cool bird I found in Nebraska",
+        "username": "Gigachad",
+        "reactions": [
+            {
+                "reactionBody": "That is a cool bird man!",
+                "username":"Gigachad"
+            }
+        ]
+    }
+]
+
