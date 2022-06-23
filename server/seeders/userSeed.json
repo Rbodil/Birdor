@@ -1,53 +1,37 @@
 [
-    {
-        "postText": "Cool bird I found in Seattle",
-        "username": "Gigachad",
-        "reactions": [
-            {
-                "reactionBody": "That is a cool bird man!",
-                "username":"Gigachad"
-            }
-        ]
+    { 
+        "username" : "BillyBob", 
+        "email" : "billybob@hotmail.com", 
+        "password" : "kGjRfUNUIRwfS_", 
+        "friends" : [], 
+        "posts" : [] 
     },
-    {
-        "postText": "Cool bird I found in AZ",
-        "username": "Gigachad",
-        "reactions": [
-            {
-                "reactionBody": "That is a cool bird man!",
-                "username":"Gigachad"
-            }
-        ]
+    { 
+        "username" : "Pineapple85", 
+        "email" : "Pineapple8550@gmail.com", 
+        "password" : "otK5YtXcalD1cm", 
+        "friends" : [], 
+        "posts" : [] 
     },
-    {
-        "postText": "Cool bird I found in Detroit",
-        "username": "Gigachad",
-        "reactions": [
-            {
-                "reactionBody": "That is a cool bird man!",
-                "username":"Gigachad"
-            }
-        ]
+    { 
+        "username" : "Big_Chungus", 
+        "email" : "Big_Chungus@hotmail.com", 
+        "password" : "AP3EUZoxzsiHn", 
+        "friends" : [], 
+        "posts" : [] 
     },
-    {
-        "postText": "Cool bird I found in Texas",
-        "username": "Gigachad",
-        "reactions": [
-            {
-                "reactionBody": "That is a cool bird man!",
-                "username":"Gigachad"
-            }
-        ]
+    { 
+        "username" : "KimK", 
+        "email" : "Kimk@yahoo.com", 
+        "password" : "3dVgSQmrGLaQE", 
+        "friends" : [], 
+        "posts" : [] 
     },
-    {
-        "postText": "Cool bird I found in Nebraska",
-        "username": "Gigachad",
-        "reactions": [
-            {
-                "reactionBody": "That is a cool bird man!",
-                "username":"Gigachad"
-            }
-        ]
+    { 
+        "username" : "caligula67", 
+        "email" : "caligula6785@yahoo.com", 
+        "password" : "BNsmRBHDH4na3", 
+        "friends" : [], 
+        "posts" : [] 
     }
 ]
-
