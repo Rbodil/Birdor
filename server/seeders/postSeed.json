@@ -1,0 +1,52 @@
+[
+    {
+        "postText": "Cool bird I found in Seattle",
+        "username": "BillyBob",
+        "reactions": [
+            {
+                "reactionBody": "That is a cool bird man!",
+                "username":"Big_Chungus"
+            }
+        ]
+    },
+    {
+        "postText": "Cool bird I found in AZ",
+        "username": "Pineapple85",
+        "reactions": [
+            {
+                "reactionBody": "That is a cool bird man!",
+                "username":"BillyBob"
+            }
+        ]
+    },
+    {
+        "postText": "Cool bird I found in Detroit",
+        "username": "KimK",
+        "reactions": [
+            {
+                "reactionBody": "That is a cool bird man!",
+                "username":"Pineapple85"
+            }
+        ]
+    },
+    {
+        "postText": "Cool bird I found in Texas",
+        "username": "Big_Chungus",
+        "reactions": [
+            {
+                "reactionBody": "That is a cool bird man!",
+                "username":"caligula67"
+            }
+        ]
+    },
+    {
+        "postText": "Cool bird I found in Nebraska",
+        "username": "caligula67",
+        "reactions": [
+            {
+                "reactionBody": "That is a cool bird man!",
+                "username":"KimK"
+            }
+        ]
+    }
+]
