@@ -13,7 +13,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import NoMatch from "./pages/NoMatch";
-import SingleThought from "./pages/SingleThought";
+import SinglePost from "./pages/SinglePost";
 import Profile from "./pages/Profile";
 import Signup from "./pages/Signup";
 
@@ -32,13 +32,14 @@ function App() {
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
           <Header />
+          <img src="/images/cover.jpeg" />
           <div className="container">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/profile" element={<Profile />} />
-              <Route path="/thought/:id" element={<SingleThought />} />
+              <Route path="/post/:id" element={<SinglePost />} />
               <Route path="*" element={<NoMatch />} />
             </Routes>
           </div>

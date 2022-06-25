@@ -1,10 +1,10 @@
 // const faker = require('faker');
-const userSeeds = require('./userSeed.json');
-const postSeeds = require('./postSeed.json');
-const db = require('../config/connection');
-const { Post, User } = require('../models');
+const userSeeds = require("./userSeed.json");
+const postSeeds = require("./postSeed.json");
+const db = require("../config/connection");
+const { Post, User } = require("../models");
 
-db.once('open', async () => {
+db.once("open", async () => {
   try {
     await Post.deleteMany({});
     await User.deleteMany({});
@@ -27,6 +27,6 @@ db.once('open', async () => {
     process.exit(1);
   }
 
-  console.log('all done!');
+  console.log("all done!");
   process.exit(0);
 });

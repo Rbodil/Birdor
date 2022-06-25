@@ -1,5 +1,6 @@
 [
     {
+        "image": "1.jpeg",
         "postText": "Cool bird I found in Seattle",
         "username": "BillyBob",
         "reactions": [
@@ -9,7 +10,7 @@
             }
         ]
     },
-    {
+    { "image": "2.jpeg",
         "postText": "Cool bird I found in AZ",
         "username": "Pineapple85",
         "reactions": [
@@ -19,7 +20,7 @@
             }
         ]
     },
-    {
+    {"image": "3.jpeg",
         "postText": "Cool bird I found in Detroit",
         "username": "KimK",
         "reactions": [
@@ -29,7 +30,7 @@
             }
         ]
     },
-    {
+    {"image": "4.jpeg",
         "postText": "Cool bird I found in Texas",
         "username": "Big_Chungus",
         "reactions": [
@@ -39,7 +40,7 @@
             }
         ]
     },
-    {
+    {"image": "5.jpeg",
         "postText": "Cool bird I found in Nebraska",
         "username": "caligula67",
         "reactions": [
