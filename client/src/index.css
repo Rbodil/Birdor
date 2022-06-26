@@ -246,10 +246,10 @@ nav a:hover {
   
 }
 
-/* .container {
+.container {
   display: flex;
   align-items: center;
-} */
+} 
 
 
 
@@ -1268,8 +1268,8 @@ nav a:hover {
 
 
 
-.image-roll{
-  /* background-image: url("/images/cover.jpeg"); */
+/*.image-roll{
+   background-image: url("/images/cover.jpeg"); 
   background-size: cover;
   background-position: center;
   position: relative;
@@ -1281,14 +1281,14 @@ nav a:hover {
 }
 .recent-post{
   /* border: 3px solid var(--secondary-color);
-  border-radius: 15px; */
+  border-radius: 15px; 
   background-color: var( --secondary);
   padding: 20px;
-  /* width: 500px; */
+  /* width: 500px; 
   color: var(--secondary-color);
   /* position: absolute;
-  bottom: 120px; */
-  /* right: 140px; */
+  bottom: 120px; 
+  /* right: 140px; 
   width: 80%;
   margin-top: 30%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -1325,5 +1325,5 @@ display: flex;
 .sidebar a:hover{
   padding: 0 10px;
   color: var(--secondary);
-}
+}*/
 

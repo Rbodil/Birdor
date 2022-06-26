@@ -10,7 +10,7 @@ import {
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-import Home from "./pages/Home";
+import Home from "./components/homepage/homepage";
 import Login from "./pages/Login";
 import NoMatch from "./pages/NoMatch";
 import SinglePost from "./pages/SinglePost";
@@ -32,7 +32,6 @@ function App() {
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
           <Header />
-          <img src="/images/cover.jpeg" />
           <div className="container">
             <Routes>
               <Route path="/" element={<Home />} />
