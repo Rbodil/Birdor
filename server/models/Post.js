@@ -10,6 +10,10 @@ const postSchema = new Schema(
       minlength: 1,
       maxlength: 280
     },
+    _id: mongoose.Schema.Types.ObjectId,
+    image: {
+        type: String
+    },
     createdAt: {
       type: Date,
       default: Date.now,

@@ -9,6 +9,10 @@ const userSchema = new Schema(
       unique: true,
       trim: true
     },
+    _id: mongoose.Schema.Types.ObjectId,
+    profileImg: {
+        type: String
+    },
     email: {
       type: String,
       required: true,
@@ -36,7 +40,8 @@ const userSchema = new Schema(
   {
     toJSON: {
       virtuals: true
-    }
+    },
+    collection: 'users'
   }
 );
 
