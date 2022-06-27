@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import Auth from "../../utils/auth";
 
@@ -20,7 +20,7 @@ const Header = () => {
           {Auth.loggedIn() ? (
             <>
               <Link to="/profile">My Post</Link>
-              <Link to="/profile">Followed</Link>
+              {/* <Link to={`/profile/${friend.username}`}>Followed</Link> */}
               <a href="/" onClick={logout}>
                 Logout
               </a>
