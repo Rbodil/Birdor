@@ -2,15 +2,21 @@ import React, { useState } from "react";
 import PostList from "../components/PostList";
 import FriendList from "../components/FriendList";
 import PostForm from "../components/PostForm";
+import FeaturedPost from "./FeaturedPost";
 import { Link } from "react-router-dom";
 import Auth from "../utils/auth";
 import { useQuery } from "@apollo/client";
-import { QUERY_POSTS, QUERY_ME_BASIC, QUERY_FEATUREDPOST } from "../utils/queries";
+import {
+  QUERY_POSTS,
+  QUERY_ME_BASIC,
+  // QUERY_FEATUREDPOST,
+} from "../utils/queries";
 // import photoPort1 from "/1.jpeg'";
-import SinglePost from "./SinglePost";
+// import SinglePost from "./SinglePost";
 
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_FEATUREDPOST);
+  // const { loading, data } = useQuery(QUERY_FEATUREDPOST);
+  const { loading, data } = useQuery(QUERY_POSTS);
   const { data: userData } = useQuery(QUERY_ME_BASIC);
   const posts = data?.posts || [];
 
@@ -31,14 +37,8 @@ const Home = () => {
         {/* <img src={photoPort} className="my-2" alt="" /> */}
         <div className="recent-post">
           <h1>Featured Post</h1>
-          {/* <img
-            src={photoPort1}
-            className="my-2"
-            style={{ width: "40%" }}
-            alt=""
-          /> */}
-          <div className="single-left">
-            <SinglePost />
+          <div>
+            <FeaturedPost />
           </div>
         </div>
       </div>

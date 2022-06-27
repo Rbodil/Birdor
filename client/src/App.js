@@ -32,7 +32,7 @@ function App() {
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
           <Header />
-          <img src="/images/cover.jpeg" />
+          {/* <img src="/images/cover.jpeg" /> */}
           <div className="container">
             <Routes>
               <Route path="/" element={<Home />} />
