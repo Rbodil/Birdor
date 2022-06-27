@@ -8,9 +8,7 @@ import { Link } from "react-router-dom";
 import Auth from "../../utils/auth";
 import { useQuery } from "@apollo/client";
 import { QUERY_POSTS, QUERY_ME_BASIC, QUERY_FEATUREDPOST } from "../../utils/queries";
-// import photoPort1 from "/1.jpeg'";
 import SinglePost from "../../pages/SinglePost.js";
-import Cover from "../../images/cover.jpeg"
 
 const Home = () => {
   const { loading, data } = useQuery(QUERY_FEATUREDPOST);
@@ -45,7 +43,7 @@ const Home = () => {
                             <PostForm />
                         </div>
                         )}
-                        <div className={`col-12 mb-3 ${loggedIn && "col-lg-8"}`}>
+                        <div className="post-list">
                         {loading ? (
                          <div>Loading...</div>
                         ) : (
@@ -62,6 +60,7 @@ const Home = () => {
                         </div>
                         ) : null}   
                    </div>
+                   <div className='links'>
                    <aside className={fix ? "sidebar fixed" : "sidebar"}>
                     <Link to="https://www.instagram.com/" className="exlink">
                         <i className="fab fa-instagram"></i>
@@ -79,6 +78,7 @@ const Home = () => {
                         <i className="fab fa-pinterest-square"></i>
                     </Link>
                     </aside>
+                    </div>
                </div> 
             </div>   
     </main>
