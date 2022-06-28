@@ -12,6 +12,11 @@ const PostList = ({ posts, title }) => {
       {posts &&
         posts.map((post) => (
           <div key={post._id} className="card mb-3">
+            <img
+              styles={{ minWidth: 100, minHeight: 100 }}
+              alt=""
+              src={`/images/${post.image}`}
+            />
             <p className="card-header">
               <Link
                 to={`/profile/${post.username}`}

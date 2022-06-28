@@ -87,6 +87,7 @@ export const QUERY_ME = gql`
       friendCount
       posts {
         _id
+        image
         postText
         createdAt
         reactionCount

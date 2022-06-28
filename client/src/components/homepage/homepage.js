@@ -1,17 +1,19 @@
 import './homepage.css'
-
 import React, { useState } from "react";
 import PostList from "../PostList";
 import FriendList from "../FriendList";
+import FeaturedPost from "../../pages/FeaturedPost";
 import PostForm from "../PostForm";
 import { Link } from "react-router-dom";
 import Auth from "../../utils/auth";
 import { useQuery } from "@apollo/client";
-import { QUERY_POSTS, QUERY_ME_BASIC, QUERY_FEATUREDPOST } from "../../utils/queries";
-import SinglePost from "../../pages/SinglePost.js";
+import { QUERY_POSTS, QUERY_ME_BASIC, 
+   // QUERY_FEATUREDPOST 
+} from "../../utils/queries";
+//import SinglePost from "../../pages/SinglePost.js";
 
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_FEATUREDPOST);
+  const { loading, data } = useQuery(QUERY_POSTS);
   const { data: userData } = useQuery(QUERY_ME_BASIC);
   const posts = data?.posts || [];
 
@@ -28,22 +30,23 @@ const Home = () => {
 
   return (
     <main className='homepage'>
-        <div>
-            <div className='featured-post'>
-               <h1>Featured Post</h1>
-               <div className='single-post'>
-                   <SinglePost /> 
-               </div> 
-               </div>
-               <div className='flex-row justify-space-between mt-20 pt-20'>
-                   <div className='recent-post'>
-                       <h1 className='mt-20'>Recent Posts</h1>
+            <div className='container post'>
+                <div className='card featured-post'>
+                    <h1>Featured Post</h1>
+                    <div className='card single-post'>
+                        <FeaturedPost /> 
+                    </div> 
+                </div>
+            <div>
+                <div className='card post-list'>
+                       <h1>Share A New Bird Sighting</h1>
                        {loggedIn && (
-                        <div className="col-12 mb-3">
+                        <div className='card'>
                             <PostForm />
                         </div>
                         )}
-                        <div className="post-list">
+                        <h1>Recent Post</h1>
+                        <div className="card list-single-post"> 
                         {loading ? (
                          <div>Loading...</div>
                         ) : (
@@ -51,7 +54,7 @@ const Home = () => {
                         )}
                         </div>
                         {loggedIn && userData ? (
-                        <div className="col-12 col-lg-3 mb-3">
+                        <div>
                         <FriendList
                         username={userData.me.username}
                         friendCount={userData.me.friendCount}
@@ -59,8 +62,10 @@ const Home = () => {
                         />
                         </div>
                         ) : null}   
+                </div>
                    </div>
-                   <div className='links'>
+                   </div>
+                   
                    <aside className={fix ? "sidebar fixed" : "sidebar"}>
                     <Link to="https://www.instagram.com/" className="exlink">
                         <i className="fab fa-instagram"></i>
@@ -78,9 +83,8 @@ const Home = () => {
                         <i className="fab fa-pinterest-square"></i>
                     </Link>
                     </aside>
-                    </div>
-               </div> 
-            </div>   
+                    
+           
     </main>
   );
 };

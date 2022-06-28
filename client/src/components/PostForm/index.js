@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_POST } from "../../utils/mutations";
 import { QUERY_POSTS, QUERY_ME } from "../../utils/queries";
-import Image from "../../images/1.jpeg"
+
 
 const PostForm = () => {
   const [postText, setText] = useState("");
@@ -54,10 +54,9 @@ const PostForm = () => {
       console.error(e);
     }
   };
-  const [currentBird, setCurrentBird] = useState({});
-  // const {image, post} =list;
+
   return (
-    <div>
+    <div className="p-2">
       {/* <input type="file" /> */}
       <p
         className={`m-0 ${characterCount === 280 || error ? "text-error" : ""}`}
@@ -69,26 +68,14 @@ const PostForm = () => {
         className="flex-row justify-center justify-space-between-md align-stretch"
         onSubmit={handleFormSubmit}
       >
-        {/* <div className="flex-row">
-        {currentPhotos.map((image, i) => (
-          <img
-            src={require(`../../assets/small/${category}/${i}.jpg`).default}
-            alt={image.name}
-            className="img-thumbnail mx-1"
-            onClick={() => toggleModal(image, i)}
-            key={image.name}
-          />
-        ))}
-      </div> */}
-        {/* <textarea
+        <textarea
           placeholder="Here's a new post..."
           value={postText}
           className="form-input col-12 col-md-9"
           onChange={handleChange}
-        ></textarea> */}
+        ></textarea>
         <div>
           <h2>Bird Post</h2>
-          <img src={Image} alt="" />
           <p>{postText}</p>
         </div>
         <button className="btn col-12 col-md-3" type="submit">

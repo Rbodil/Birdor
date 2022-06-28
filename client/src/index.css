@@ -43,7 +43,7 @@ h5,
 h6 {
   font-family: 'Karla', sans-serif;
   font-weight: 700;
-  /* margin: 5px 0; */
+  margin: 5px 0;
   line-height: 1.25;
 }
 
@@ -246,10 +246,10 @@ nav a:hover {
   
 }
 
-.container {
+/* .container {
   display: flex;
   align-items: center;
-} 
+} */
 
 
 
@@ -673,7 +673,7 @@ nav a:hover {
   padding-left: auto;
 }
 
-/* padding - x axis */
+/* padding - x axis; */
 
 .px-0 {
   padding-right: 0;
@@ -1269,7 +1269,7 @@ nav a:hover {
 
 
 /*.image-roll{
-   background-image: url("/images/cover.jpeg"); 
+  background: url("./assets/images/cover.jpeg");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -1294,7 +1294,7 @@ nav a:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
 }
-.single-left{
+/*.single-left{
 width: 50%;
 text-align: right;
 margin: 3.5%;
