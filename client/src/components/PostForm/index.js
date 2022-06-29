@@ -7,29 +7,31 @@ import { QUERY_POSTS, QUERY_ME } from "../../utils/queries";
 const PostForm = () => {
   const [postText, setText] = useState("");
   const [characterCount, setCharacterCount] = useState(0);
-
-  const [addPost, { error }] = useMutation(ADD_POST, {
-    update(cache, { data: { addPost } }) {
+  const [addPost, { error }] = useMutation(ADD_POST)
+  
+    
+   // , {
+   // update(cache, { data: { addPost } }) {
       // could potentially not exist yet, so wrap in a try/catch
-      try {
+    //  try {
         // update me array's cache
-        const { me } = cache.readQuery({ query: QUERY_ME });
-        cache.writeQuery({
-          query: QUERY_ME,
-          data: { me: { ...me, posts: [...me.posts, addPost] } },
-        });
-      } catch (e) {
-        console.warn("First post insertion by user!");
-      }
+     //   const { me } = cache.readQuery({ query: QUERY_ME });
+     //   cache.writeQuery({
+     //     query: QUERY_ME,
+  //         data: { me: { ...me, posts: [...me.posts, addPost] } },
+  //       });
+  //     } catch (e) {
+  //       console.warn("First post insertion by user!");
+  //     }
 
-      // update post array's cache
-      const { posts } = cache.readQuery({ query: QUERY_POSTS });
-      cache.writeQuery({
-        query: QUERY_POSTS,
-        data: { posts: [addPost, ...posts] },
-      });
-    },
-  });
+  //     // update post array's cache
+  //     const { posts } = cache.readQuery({ query: QUERY_POSTS });
+  //     cache.writeQuery({
+  //       query: QUERY_POSTS,
+  //       data: { posts: [addPost, ...posts] },
+  //     });
+  //   },
+  // });
 
   const handleChange = (event) => {
     if (event.target.value.length <= 280) {
@@ -43,10 +45,10 @@ const PostForm = () => {
 
     try {
       // add post to database
-      await addPost({
+     const post = await addPost({
         variables: { postText },
       });
-
+      console.log(post)
       // clear form value
       setText("");
       setCharacterCount(0);

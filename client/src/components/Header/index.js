@@ -8,7 +8,9 @@ const Header = () => {
     event.preventDefault();
     Auth.logout();
   };
+  const user = Auth.loggedIn()?Auth.getProfile(): undefined;
 
+ console.log(user);
   return (
     <header className='bg-secondary w-screen flex-row justify-center pt-2 pb-2 shrink top-0 sticky z-0 h-22'>
       <div className="container flex-row justify-space-between-lg justify-center align-center">
@@ -19,7 +21,7 @@ const Header = () => {
         <nav className="text-center">
           {Auth.loggedIn() ? (
             <>
-              <Link to="/profile">My Post</Link>
+              <Link to={`/profile/${user.data.username}`}>My Post</Link>
               {/* <Link to={`/profile/${friend.username}`}>Followed</Link> */}
               <a href="/" onClick={logout}>
                 Logout
