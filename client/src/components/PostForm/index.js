@@ -3,6 +3,7 @@ import { useMutation } from "@apollo/client";
 import { ADD_POST } from "../../utils/mutations";
 import { QUERY_POSTS, QUERY_ME } from "../../utils/queries";
 
+
 const PostForm = () => {
   const [postText, setText] = useState("");
   const [characterCount, setCharacterCount] = useState(0);
@@ -55,7 +56,7 @@ const PostForm = () => {
   };
 
   return (
-    <div>
+    <div className="p-2">
       {/* <input type="file" /> */}
       <p
         className={`m-0 ${characterCount === 280 || error ? "text-error" : ""}`}

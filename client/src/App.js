@@ -10,7 +10,7 @@ import {
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-import Home from "./pages/Home";
+import Home from "./components/homepage/homepage";
 import Login from "./pages/Login";
 import NoMatch from "./pages/NoMatch";
 import SinglePost from "./pages/SinglePost";
@@ -30,10 +30,10 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
-          <Header />
+        <div>
+          <Header className='bg-secondary w-screen flex-row justify-center pt-2 pb-2 shrink top-0 fixed z-9999 h-24'/>
           {/* <img src="/images/cover.jpeg" /> */}
-          <div className="container">
+          <div>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
