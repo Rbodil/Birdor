@@ -7,31 +7,16 @@ import { QUERY_POSTS, QUERY_ME } from "../../utils/queries";
 const PostForm = () => {
   const [postText, setText] = useState("");
   const [characterCount, setCharacterCount] = useState(0);
-  const [addPost, { error }] = useMutation(ADD_POST)
+  const [addPost, { error }] = useMutation(ADD_POST
   
     
-   // , {
-   // update(cache, { data: { addPost } }) {
-      // could potentially not exist yet, so wrap in a try/catch
-    //  try {
-        // update me array's cache
-     //   const { me } = cache.readQuery({ query: QUERY_ME });
-     //   cache.writeQuery({
-     //     query: QUERY_ME,
-  //         data: { me: { ...me, posts: [...me.posts, addPost] } },
-  //       });
-  //     } catch (e) {
-  //       console.warn("First post insertion by user!");
-  //     }
-
-  //     // update post array's cache
-  //     const { posts } = cache.readQuery({ query: QUERY_POSTS });
-  //     cache.writeQuery({
-  //       query: QUERY_POSTS,
-  //       data: { posts: [addPost, ...posts] },
-  //     });
-  //   },
-  // });
+   , {
+    refetchQueries:[
+      {
+        query: QUERY_POSTS
+      }
+    ]
+  });
 
   const handleChange = (event) => {
     if (event.target.value.length <= 280) {

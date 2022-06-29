@@ -67,7 +67,7 @@ const resolvers = {
     addPost: async (parent, args, context) => {
       console.log(context.user);
       if (context.user) {
-        const post = await post.create({
+        const post = await Post.create({
           ...args,
           username: context.user.username,
         });
