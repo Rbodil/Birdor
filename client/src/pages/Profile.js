@@ -10,22 +10,23 @@ import Auth from "../utils/auth";
 
 const Profile = (props) => {
   const { username: userParam } = useParams();
-  // console.log(userParam);
-  const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
+  console.log(userParam);
+  
+  const { loading, data } = useQuery(QUERY_USER, {
     variables: { username: userParam },
   });
-
+  console.log(data);
   const user = data?.me || data?.user || {};
 
   // navigate to personal profile page if username is yours
-  if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
-    return <Navigate to="/profile" />;
-  }
+  //if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
+    //return <Navigate to="/profile" />;
+  //}
 
   if (loading) {
     return <div>Loading...</div>;
   }
-
+  console.log(user);
   if (!user?.username) {
     return (
       <h4>
