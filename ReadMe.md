@@ -18,7 +18,7 @@
 
   ## Usage
   
-  Visit https://rbodil.github.io/Birdor/ and go nuts!!
+  Visit https://safe-everglades-20797.herokuapp.com/ and go nuts!!
   
   ## Contributing
 
