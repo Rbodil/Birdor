@@ -29,7 +29,7 @@ const Profile = (props) => {
     <div id="profile" className="">
       <div className="mb-3 mt-20">
         <div className="col-12 col-lg-8 mt-20">
-          <h1>You Posts</h1>
+          <h1>Your Post List</h1>
           <PostList posts={user.posts} />
         </div>
 
