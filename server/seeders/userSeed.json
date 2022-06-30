@@ -1,0 +1,37 @@
+[
+    { 
+        "username" : "BillyBob", 
+        "email" : "billybob@hotmail.com", 
+        "password" : "kGjRfUNUIRwfS_", 
+        "friends" : [], 
+        "posts" : [] 
+    },
+    { 
+        "username" : "Pineapple85", 
+        "email" : "Pineapple8550@gmail.com", 
+        "password" : "otK5YtXcalD1cm", 
+        "friends" : [], 
+        "posts" : [] 
+    },
+    { 
+        "username" : "Big_Chungus", 
+        "email" : "Big_Chungus@hotmail.com", 
+        "password" : "AP3EUZoxzsiHn", 
+        "friends" : [], 
+        "posts" : [] 
+    },
+    { 
+        "username" : "KimK", 
+        "email" : "Kimk@yahoo.com", 
+        "password" : "3dVgSQmrGLaQE", 
+        "friends" : [], 
+        "posts" : [] 
+    },
+    { 
+        "username" : "caligula67", 
+        "email" : "caligula6785@yahoo.com", 
+        "password" : "BNsmRBHDH4na3", 
+        "friends" : [], 
+        "posts" : [] 
+    }
+]
