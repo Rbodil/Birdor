@@ -22,7 +22,7 @@ const SinglePost = (props) => {
   }
 
   return (
-    <div>
+    <div className="reactions">
       <div className="card mb-3">
         <p className="card-header">
           <span style={{ fontWeight: 700 }} className="text-light">
@@ -34,9 +34,11 @@ const SinglePost = (props) => {
           <p>{post.postText}</p>
         </div>
       </div>
+      <div className="border-inherit mt-2 pt-2">
+        {post.reactionCount > 0 && <ReactionList reactions={post.reactions} />}
+        {Auth.loggedIn() && <ReactionForm postId={post._id} />}
+      </div>
 
-      {post.reactionCount > 0 && <ReactionList reactions={post.reactions} />}
-      {Auth.loggedIn() && <ReactionForm postId={post._id} />}
     </div>
   );
 };

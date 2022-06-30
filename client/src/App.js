@@ -42,7 +42,6 @@ function App() {
       <Router>
         <div>
           <Header className='bg-secondary w-screen flex-row justify-center pt-2 pb-2 shrink top-0 fixed z-9999 h-24'/>
-          <img src="/images/cover.jpeg" />
           <div>
             <Routes>
               <Route path="/" element={<Home />} />

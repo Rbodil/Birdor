@@ -11,7 +11,7 @@ import Auth from "../utils/auth";
 const Profile = (props) => {
   const { username: userParam } = useParams();
   console.log(userParam);
-  
+
   const { loading, data } = useQuery(QUERY_USER, {
     variables: { username: userParam },
   });
@@ -20,7 +20,7 @@ const Profile = (props) => {
 
   // navigate to personal profile page if username is yours
   //if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
-    //return <Navigate to="/profile" />;
+  //return <Navigate to="/profile" />;
   //}
 
   if (loading) {
@@ -30,23 +30,16 @@ const Profile = (props) => {
   if (!user?.username) {
     return (
       <h4>
-        You need to be logged in to see this. Use the navigation links above to
-        sign up or log in!
+        Please sign up or log in
       </h4>
     );
   }
 
   return (
-    <div id="profile">
-      <div className="flex-row mb-3">
-        <h2 className="bg-dark text-secondary p-3 display-inline-block">
-          Viewing {userParam ? `${user.username}'s` : "your"} profile.
-        </h2>
-      </div>
-
-      <div className="flex-row justify-space-between mb-3">
+    <div id="profile" className="reactions">
+      <div className="flex-row justify-space-between mb-3 mt-2">
         <div className="col-12 mb-3 col-lg-8">
-          <PostList posts={user.posts} title={`${user.username}'s posts...`} />
+          <PostList posts={user.posts} />
         </div>
 
         <div className="col-12 col-lg-3 mb-3">

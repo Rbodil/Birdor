@@ -42,6 +42,7 @@ export const ADD_POST = gql`
   mutation addPost($postText: String!) {
     addPost(postText: $postText) {
       _id
+      image
       postText
       createdAt
       username
@@ -54,16 +55,18 @@ export const ADD_POST = gql`
 `;
 
 export const ADD_REACTION = gql`
-  mutation addReaction($thoughtId: ID!, $reactionBody: String!) {
-    addReaction(thoughtId: $thoughtId, reactionBody: $reactionBody) {
+mutation AddReaction($postId: ID!, $reactionBody: String!) {
+  addReaction(postId: $postId, reactionBody: $reactionBody) {
+    postText
+    _id
+    username
+    reactionCount
+    reactions {
       _id
-      reactionCount
-      reactions {
-        _id
-        reactionBody
-        createdAt
-        username
-      }
+      reactionBody
+      username
     }
+    
   }
+}
 `;

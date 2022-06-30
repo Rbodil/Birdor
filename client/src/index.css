@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --primary: #497573;
   --secondary:  #374137;
@@ -102,6 +106,28 @@ nav a {
 nav a:hover {
   color: var(--secondary);
   background-color: var(--dark);
+}
+
+.reactions {
+    margin-top: 0;
+    padding: 50px 0px;
+    height: 100vh;
+    width: 100%;
+    background-image: url(../src/assets/images/cover.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reform {
+  border: 2px solid var(--secondary);
+  border-radius: 15px;
+  padding: 10px;
+  background-color: var(--primary);
 }
 
 .page-title {
