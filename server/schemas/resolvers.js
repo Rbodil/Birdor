@@ -59,13 +59,12 @@ const resolvers = {
       if (!correctPw) {
         throw new AuthenticationError("Incorrect credentials");
       }
-      console.log(user);
+
       const token = signToken(user);
-      console.log(token)
+
       return { token, user };
     },
     addPost: async (parent, args, context) => {
-      console.log(context.user);
       if (context.user) {
         const post = await Post.create({
           ...args,
