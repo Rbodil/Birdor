@@ -24,23 +24,9 @@ export const ADD_USER = gql`
   }
 `;
 
-export const ADD_FRIEND = gql`
-  mutation addFriend($id: ID!) {
-    addFriend(friendId: $id) {
-      _id
-      username
-      friendCount
-      friends {
-        _id
-        username
-      }
-    }
-  }
-`;
-
 export const ADD_POST = gql`
-  mutation addPost($postText: String!) {
-    addPost(postText: $postText) {
+  mutation addPost($postText: String!, $image: String) {
+    addPost(postText: $postText, image: $image) {
       _id
       image
       postText
@@ -55,18 +41,41 @@ export const ADD_POST = gql`
 `;
 
 export const ADD_REACTION = gql`
-mutation AddReaction($postId: ID!, $reactionBody: String!) {
-  addReaction(postId: $postId, reactionBody: $reactionBody) {
-    postText
-    _id
-    username
-    reactionCount
-    reactions {
+  mutation addReaction($thoughtId: ID!, $reactionBody: String!) {
+    addReaction(thoughtId: $thoughtId, reactionBody: $reactionBody) {
       _id
-      reactionBody
-      username
+      reactionCount
+      reactions {
+        _id
+        reactionBody
+        createdAt
+        username
+      }
     }
-    
   }
-}
+`;
+export const ADD_FRIEND = gql`
+  mutation addFriend($id: ID!) {
+    addFriend(friendId: $id) {
+      _id
+      username
+      friendCount
+      friends {
+        _id
+        username
+      }
+    }
+  }
+`;
+export const REMOVE_FRIEND = gql`
+  mutation removeFriend($id: ID!) {
+    removeFriend(id: $id) {
+      _id
+      username
+      friends {
+        _id
+        username
+      }
+    }
+  }
 `;

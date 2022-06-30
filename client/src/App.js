@@ -10,7 +10,9 @@ import { setContext } from "@apollo/client/link/context";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-import Home from "./components/homepage/homepage";
+// import Home from "./components/homepage/homepage";
+
+import Home from "./pages/Home";
 import Login from "./pages/Login";
 import NoMatch from "./pages/NoMatch";
 import SinglePost from "./pages/SinglePost";
@@ -22,11 +24,11 @@ const httpLink = createHttpLink({
 });
 
 const authLink = setContext((_, { headers }) => {
-  const token = localStorage.getItem('id_token');
+  const token = localStorage.getItem("id_token");
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : '',
+      authorization: token ? `Bearer ${token}` : "",
     },
   };
 });
@@ -41,7 +43,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
-          <Header className='bg-secondary w-screen flex-row justify-center pt-2 pb-2 shrink top-0 fixed z-9999 h-24'/>
+          <Header className="bg-secondary w-screen flex-row justify-center pt-2 pb-2 shrink top-0 fixed z-9999 h-24" />
           <div>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -49,7 +51,7 @@ function App() {
               <Route path="/signup" element={<Signup />} />
               <Route path="/profile/:username" element={<Profile />} />
               <Route path="/post/:id" element={<SinglePost />} />
-             <Route path="*" element={<NoMatch />} />
+              <Route path="*" element={<NoMatch />} />
             </Routes>
           </div>
           <Footer />

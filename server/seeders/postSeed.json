@@ -1,6 +1,6 @@
 [
     {
-        "image": "1.jpeg",
+        "image": "https://nas-national-prod.s3.amazonaws.com/styles/api_hero_bird_with_crop_1920_1200/public/birds/hero_image/h_a1_3725_3_northern-cardinal_carole_wiley_kk_adult-male-and-adult-female_0.jpg?tok=1626941160",
         "postText": "Cool bird I found in Seattle",
         "username": "BillyBob",
         "reactions": [
@@ -10,7 +10,7 @@
             }
         ]
     },
-    { "image": "2.jpeg",
+    { "image": "https://www.thestatesman.com/wp-content/uploads/2020/11/QT-Birds.jpg",
         "postText": "Cool bird I found in AZ",
         "username": "Pineapple85",
         "reactions": [
@@ -20,7 +20,7 @@
             }
         ]
     },
-    {"image": "3.jpeg",
+    {"image": "https://www.imperial.ac.uk/ImageCropToolT4/imageTool/uploaded-images/newseventsimage_1529346275459_mainnews2012_x1.jpg",
         "postText": "Cool bird I found in Detroit",
         "username": "KimK",
         "reactions": [
@@ -30,7 +30,7 @@
             }
         ]
     },
-    {"image": "4.jpeg",
+    {"image": "https://www.thoughtco.com/thmb/YkksU0Xy_2kfdDolJLPja7NM8jI=/2121x1193/smart/filters:no_upscale()/swallowGE-57a109323df78c3276f5b8a0.jpg",
         "postText": "Cool bird I found in Texas",
         "username": "Big_Chungus",
         "reactions": [
@@ -40,8 +40,58 @@
             }
         ]
     },
-    {"image": "5.jpeg",
+    {"image": "https://academy.allaboutbirds.org/wp-content/uploads/2020/01/joy-Arvo_Poolar-thumb-scaled-scaled-600x400.jpg",
         "postText": "Cool bird I found in Nebraska",
+        "username": "caligula67",
+        "reactions": [
+            {
+                "reactionBody": "That is a cool bird man!",
+                "username":"KimK"
+            }
+        ]
+    },
+    {"image": "https://static.scientificamerican.com/sciam/cache/file/268F292B-5DDD-4DB1-B5ABC6541A70ECDF_source.jpg",
+        "postText": "Cool bird I found in Colorado",
+        "username": "caligula67",
+        "reactions": [
+            {
+                "reactionBody": "That is a cool bird man!",
+                "username":"KimK"
+            }
+        ]
+    },
+    {"image": "https://audubonportland.org/wp-content/uploads/2019/01/American-Robin-5D3_8701_filtered-SC-1024x682.jpg",
+        "postText": "Cool bird I found in Kansas",
+        "username": "caligula67",
+        "reactions": [
+            {
+                "reactionBody": "That is a cool bird man!",
+                "username":"KimK"
+            }
+        ]
+    },
+    {"image": "https://www.thesprucepets.com/thmb/1wXTxzLYZUNBfUpweDnB7GphSLw=/420x0/filters:no_upscale():max_bytes(150000):strip_icc()/rainbow-lorikeet-1203476610-98e4fcb921984597bf7b5c15f94b3e6d.jpg",
+        "postText": "Cool bird I found in Dallas",
+        "username": "caligula67",
+        "reactions": [
+            {
+                "reactionBody": "That is a cool bird man!",
+                "username":"KimK"
+            }
+        ]
+    },
+    {"image": "https://nas-national-prod.s3.amazonaws.com/styles/hero_image/s3/web_aud_apa-2018_sandhill-crane_a1-7354-1_ts_photo-tara-tanaka.jpg",
+        "postText": "Cool bird I found in Iowa",
+        "username": "caligula67",
+        "reactions": [
+            {
+                "reactionBody": "That is a cool bird man!",
+                "username":"KimK"
+            }
+        ]
+    },
+    {"image": "https://static01.nyt.com/images/2022/04/21/science/21BALD-EAGLES/21BALD-EAGLES-superJumbo.jpg",
+        "postText": "Cool bird I found in Missouri",
         "username": "caligula67",
         "reactions": [
             {

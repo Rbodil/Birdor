@@ -7,30 +7,31 @@ const PostList = ({ posts, title }) => {
   }
 
   return (
-    <div>
+    <div classname="block">
       <h3>{title}</h3>
       {posts &&
         posts.map((post) => (
-          <div key={post._id} className="card mb-3">
+          <div key={post._id} className="mt-10 pt-10">
             <img
-              styles={{ minWidth: 100, minHeight: 100 }}
+              className="shrink-0 h-50 w-50 rounded-full block"
+              // styles={{ Width: 300, Height: 300 }}
               alt=""
-              src={`/images/${post.image}`}
+              src={`${post.image}`}
             />
             <p className="card-header">
               <Link
                 to={`/profile/${post.username}`}
                 style={{ fontWeight: 700 }}
-                className="text-light"
+                className="text-light block"
               >
                 {post.username}
               </Link>{" "}
               post on {post.createdAt}
             </p>
-            <div className="card-body">
+            <div className="card-body block">
               <Link to={`/post/${post._id}`}>
                 <p>{post.postText}</p>
-                <p className="mb-0">
+                <p className="mb-0 block">
                   Reactions: {post.reactionCount} || Click to{" "}
                   {post.reactionCount ? "see" : "start"} the discussion!
                 </p>

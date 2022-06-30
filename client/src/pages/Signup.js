@@ -38,14 +38,14 @@ const Signup = () => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
+    <main className="flex-row justify-center mb-4 mt-20">
       <div className="col-12 col-md-6">
         <div className="card">
           <h4 className="card-header">Sign Up</h4>
           <div className="card-body">
             <form onSubmit={handleFormSubmit}>
               <input
-                className="form-input"
+                className="mt-1 px-3 py-3 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md lg:text-lg focus:ring-1 h-30"
                 placeholder="Your username"
                 name="username"
                 type="username"
@@ -54,7 +54,7 @@ const Signup = () => {
                 onChange={handleChange}
               />
               <input
-                className="form-input"
+                className="mt-1 px-3 py-3 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md lg:text-lg focus:ring-1 h-30"
                 placeholder="Your email"
                 name="email"
                 type="email"
@@ -63,7 +63,7 @@ const Signup = () => {
                 onChange={handleChange}
               />
               <input
-                className="form-input"
+                className="mt-1 px-3 py-3 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-full rounded-md lg:text-lg focus:ring-1 h-30"
                 placeholder="******"
                 name="password"
                 type="password"
@@ -78,7 +78,10 @@ const Signup = () => {
 
             {error && <div>Signup failed</div>}
           </div>
-          Already have an account? Login <Link to="/login">here</Link>
+          Already have an account? Login{" "}
+          <Link to="/login" className=" #374137 underline font-bold">
+            here{" "}
+          </Link>
         </div>
       </div>
     </main>

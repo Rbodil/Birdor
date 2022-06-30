@@ -1,11 +1,9 @@
 import React from "react";
-
 import { useQuery } from "@apollo/client";
 import { QUERY_FEATUREDPOST } from "../utils/queries";
 
 const FeaturedPost = (props) => {
   const { loading, data } = useQuery(QUERY_FEATUREDPOST);
-  //   console.log(data);
   const featuredpost = data?.featuredpost || {};
 
   if (loading) {
@@ -18,7 +16,7 @@ const FeaturedPost = (props) => {
         <img
           styles={{ minWidth: 100, minHeight: 100 }}
           alt=""
-          src={`/images/${featuredpost.image}`}
+          src={`${featuredpost.image}`}
         />
         <p className="card-header">
           <span style={{ fontWeight: 700 }} className="text-light">
@@ -30,11 +28,6 @@ const FeaturedPost = (props) => {
           <p>{featuredpost.postText}</p>
         </div>
       </div>
-
-      {/* {featuredpost.reactionCount > 0 && (
-        <ReactionList reactions={featuredpost.reactions} />
-      )} */}
-      {/* {Auth.loggedIn() && <ReactionForm postId={featuredpost._id} />} */}
     </div>
   );
 };
