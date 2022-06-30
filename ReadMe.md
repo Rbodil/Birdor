@@ -22,10 +22,10 @@
   
   ## Contributing
 
-  Reagan Bodily
-  Conner McCown
-  Nancy Wang
-  Luke Sturgill
+  * Reagan Bodily
+  * [Conner McCown](https://github.com/mccrown)
+  * [Nancy Wang](https://github.com/nancywa1)
+  * [Luke Sturgill](https://github.com/Lukesturgill)
 
   ## Tests
 
