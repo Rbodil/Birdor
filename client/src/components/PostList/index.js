@@ -7,7 +7,7 @@ const PostList = ({ posts, title }) => {
   }
 
   return (
-    <div classname="block">
+    <div className="block">
       <h3>{title}</h3>
       {posts &&
         posts.map((post) => (

@@ -58,7 +58,7 @@ const PostForm = () => {
   };
 
   return (
-    <div classname="content-center">
+    <div className="content-center">
       <h3>Upload Image URL:</h3>
       <input
         type="text"

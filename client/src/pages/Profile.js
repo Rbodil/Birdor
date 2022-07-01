@@ -20,7 +20,7 @@ const Profile = (props) => {
   if (loading) {
     return <div>Loading...</div>;
   }
-  console.log(user);
+  // console.log(user);
   if (!user?.username) {
     return <h4>Please sign up or log in</h4>;
   }
