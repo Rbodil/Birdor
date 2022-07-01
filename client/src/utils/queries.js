@@ -79,8 +79,8 @@ export const QUERY_USER = gql`
 `;
 
 export const QUERY_ME = gql`
-  {
-    me {
+  query me($username: String!) {
+    me(username: $username) {
       _id
       username
       email
