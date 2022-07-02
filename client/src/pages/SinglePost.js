@@ -31,6 +31,7 @@ const SinglePost = (props) => {
           post on {post.createdAt}
         </p>
         <div className="card-body">
+          <img src={post.image}></img>
           <p>{post.postText}</p>
         </div>
       </div>

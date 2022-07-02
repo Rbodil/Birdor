@@ -15,7 +15,7 @@ const Profile = (props) => {
   const { loading, data } = useQuery(QUERY_USER, {
     variables: { username: userParam },
   });
-  console.log(data);
+  // console.log(data);
   const user = data?.me || data?.user || {};
 
   // navigate to personal profile page if username is yours
