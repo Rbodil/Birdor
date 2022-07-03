@@ -39,8 +39,8 @@ export const ADD_FRIEND = gql`
 `;
 
 export const ADD_POST = gql`
-  mutation addPost($postText: String!) {
-    addPost(postText: $postText) {
+  mutation addPost($postText: String!, $image: String) {
+    addPost(postText: $postText, image: $image) {
       _id
       image
       postText

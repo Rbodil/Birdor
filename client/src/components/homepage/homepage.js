@@ -30,8 +30,8 @@ const Home = () => {
   window.addEventListener("scroll", setFixedSidebar);
 
   return (
-    <main className='homepage w-full'>
-      <div className='container post w-full'>
+    <main className='homepage'>
+      <div className='container post'>
         <div className='card featured-post'>
           <h1>Featured Post</h1>
           <div className='card single-post'>
@@ -40,7 +40,7 @@ const Home = () => {
         </div>
         <div>
           <div className='card post-list'>
-            <h1>Share A New Bird Sighting</h1>
+            <h1>Post a Bird</h1>
             {loggedIn && (
               <div className='card'>
                 <PostForm />
@@ -51,7 +51,7 @@ const Home = () => {
               {loading ? (
                 <div>Loading...</div>
               ) : (
-                <PostList posts={posts} title="Some Feed for Post(s)..." />
+                <PostList posts={posts} />
               )}
             </div>
             {loggedIn && userData ? (
@@ -66,6 +66,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+
     </main>
   );
 };
